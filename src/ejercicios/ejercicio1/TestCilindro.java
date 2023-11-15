@@ -18,7 +18,18 @@ public class TestCilindro {
         System.out.println(cilindro2);
         cilindro2.setAltura(10);  //actualizamos altura
         System.out.println(cilindro2);
-
-
+        //trabajando con record
+        System.out.println("==========V2 Record==========");
+        CilindroV2 cilindro3 = new CilindroV2(8, 9);
+        System.out.println(cilindro3);
+        CilindroV2 cilindro4 = new CilindroV2(12);
+        System.out.println(cilindro4);
+        CilindroV2 cilindro5 = new CilindroV2();
+        System.out.println(cilindro5);
+        System.out.printf("CILINDRO: radio %d y altura %d%n",
+                cilindro5.radio(), cilindro5.altura());
+        //cilindro5.altura() = 45; no se puede hacer
+        System.out.printf("Volumen %d y supercie %d%n",
+                cilindro5.getVolumen(), cilindro5.getSuperficie());
     }
 }

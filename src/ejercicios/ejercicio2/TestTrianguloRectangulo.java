@@ -15,6 +15,13 @@ public class TestTrianguloRectangulo {
         TrianguloRectanguloV1 trianguloRectanguloV1 =
                 new TrianguloRectanguloV1(6, 9);
         System.out.print(trianguloRectanguloV1);
+        System.out.println("===========V1=============");
+        TrianguloRectanguloV2 trianguloRectanguloV2 =
+                new TrianguloRectanguloV2(5, 5);
+        System.out.println(trianguloRectanguloV2.toString());
+        System.out.printf("Catetos: %d y %d, hipotenusa %.2f%n",
+                trianguloRectanguloV2.cateto1(), trianguloRectanguloV2.cateto2(),
+                trianguloRectanguloV2.getHipotenusa());
 
     }
 }
