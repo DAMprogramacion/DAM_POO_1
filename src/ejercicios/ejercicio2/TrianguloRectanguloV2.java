@@ -13,6 +13,6 @@ public record TrianguloRectanguloV2 (int cateto1, int cateto2){
 
     @Override
     public String toString() {
-        return String.format("TRIÁNGULO RECTÁNGULO");
+        return "TRIÁNGULO RECTÁNGULO";
     }
 }
