@@ -81,9 +81,36 @@ class HelperTest {
         assertTrue(Helper.validarFechas("15/01/2000"));
         assertTrue(Helper.validarFechas("07/01/2000"));
         assertFalse(Helper.validarFechas("15/13/2000"));
-        assertTrue(Helper.validarFechas("31/02/2000"));
-        assertTrue(Helper.validarFechas("31/02/1999"));
-        assertFalse(Helper.validarFechas("31/02/1899"));
-        assertFalse(Helper.validarFechas("31/02/3000"));
+        assertFalse(Helper.validarFechas("31/02/2000"));
+        assertFalse(Helper.validarFechas("29/02/1999"));
+        assertFalse(Helper.validarFechas("31/9/1999"));
+        assertFalse(Helper.validarFechas("30/02/2000"));
+        assertTrue(Helper.validarFechas("29/02/2000"));
+        assertTrue(Helper.validarFechas("29/02/2004"));
+        assertTrue(Helper.validarFechas("29/02/2104"));
+        assertFalse(Helper.validarFechas("29/02/2100"));
+
+
+
+
+    }
+
+    @Test
+    void esBisiesto() {
+        assertFalse(Helper.esBisiesto("doce/doce/dos mil"));
+        assertTrue(Helper.esBisiesto("12/12/2000"));
+        assertFalse(Helper.esBisiesto("12/12/2001"));
+        assertTrue(Helper.esBisiesto("12/12/2004"));
+        assertFalse(Helper.esBisiesto("12/12/2100"));
+
+
+    }
+
+
+    @Test
+    void esFinDeSigloBisiesto() {
+        assertFalse(Helper.esFinDeSigloBisiesto(2100));
+        assertTrue(Helper.esFinDeSigloBisiesto(2000));
+
     }
 }
